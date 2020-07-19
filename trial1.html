@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="trial1.css" />
+    <title>Trial1</title>
+    <script
+      src="https://kit.fontawesome.com/a8f479fcf0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header__logo">
+          <img src="lotologo.png" width="33" alt="houtou" />
+          <a href="">宝くじに当たろう</a>
+        </div>
+      </header>
+      <section class="content">
+        <nav>
+          <ul>
+            <li>ログイン</li>
+            <li>コメント</li>
+            <li>アプリ</li>
+          </ul>
+        </nav>
+        <main>
+          <div class="w3-row">
+            <div class="w3-col m8">
+              <div id="mywebcam"></div>
+              <p>
+                <button onclick="takescreenshot()" class="w3-button w3-blue">
+                  写真を撮る
+                </button>
+              </p>
+            </div>
+            <div class="w3-col m4">
+              <div id="results">画像はこちら</div>
+            </div>
+          </div>
+
+          <script src="webcam.min.js"></script>
+          <script>
+            Webcam.set({
+              width: 600,
+              height: 400,
+              image_format: "jpeg",
+              jpeg_quality: 90,
+            });
+            Webcam.attach("#mywebcam");
+
+            function takescreenshot() {
+              Webcam.snap(function (data_uri) {
+                document.getElementById("results").innerHTML =
+                  "<h2>画像はこちら</h2><img width='600' src='" +
+                  data_uri +
+                  "'>";
+              });
+            }
+          </script>
+        </main>
+        <aside>
+          Google AdMob
+        </aside>
+      </section>
+      <footer>
+        Copyright © 2020 Dayo Co.,ltd. All Rights Reserved.
+      </footer>
+    </div>
+  </body>
+</html>

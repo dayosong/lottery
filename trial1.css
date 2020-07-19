@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: "meiryo";
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212121;
+  padding: 8px 12px;
+}
+.header__logo {
+  font-size: 24px;
+  color: white;
+}
+footer {
+  background-color: #424242;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.5rem;
+  color: white;
+}
+.content {
+  display: flex;
+}
+.content nav {
+  background-color: #757575;
+}
+.content aside {
+  background-color: #bdbdbd;
+  text-align: center;
+}
+nav {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+aside {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+main {
+  padding: 10px;
+}
